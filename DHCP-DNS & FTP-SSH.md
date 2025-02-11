@@ -7,9 +7,12 @@ $sudo apt -y install isc-dhcp-server
 - Désactiver dhcp local VMWare 
 - Configuration 
 $sudo nano /etc/network/interfaces 
--> paramètre carte réseau ens33 => static 
+-> paramètre carte réseau ens33 => static
+  ![inet static](https://github.com/user-attachments/assets/f7df2e88-63f7-4f2a-9b54-ea611f098a5f)
+
 $ip a
 -> vérifie que l'adresse IP est la bonne
+  
 $sudo nano /etc/dhcp/dhcpd.conf 
 -> paramètre conf dhcp 
 $sudo nano /etc/default/isc-dhcp-server
