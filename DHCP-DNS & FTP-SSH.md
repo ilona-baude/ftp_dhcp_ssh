@@ -26,7 +26,9 @@ $sudo nano /etc/default/isc-dhcp-server
 
 - Restart + status 
 $sudo systemctl restart isc-dhcp-server 
-$sudo systemctl status isc-dhcp-server 
+$sudo systemctl status isc-dhcp-server
+![isc status](https://github.com/user-attachments/assets/43aeca12-6749-41be-96b7-6430e53acbe8)
+
 - ip a vm client
   ![dhcp vm2 ip](https://github.com/user-attachments/assets/7ae8535e-b497-40ab-9a70-c9484225c14a)
 - erreur ?
@@ -35,13 +37,24 @@ $sudo systemctl status isc-dhcp-server
   
   3- FTP
 - installation proftpd
+  $sudo apt instal proftpd
   
 - config proftpd
+  $sudo nano /etc/proftpd/proftpd.conf
+  
 -> limit number of connexion 
--> limit login to registered user of allowed group 
--> disable anonymous login 
+-> limit login to registered user of allowed group
+![Capture d’écran (77)](https://github.com/user-attachments/assets/8506fa22-da3b-4716-add2-dfe7a5bedc52)
+
+-> disable anonymous login
+![Capture d’écran (79)](https://github.com/user-attachments/assets/c8224af5-6064-4f11-9a42-991a7428b712)
+
 -> change default port to 6500 for better security 
+![Capture d’écran (76)](https://github.com/user-attachments/assets/988dc3fb-a0c8-48be-957c-9f4aebca7ef9)
+
 -> enable ssh and sftp connexion
+![Capture d’écran (78)](https://github.com/user-attachments/assets/805019e3-bbbe-40d5-b3da-88db80eaebd5)
+
   
 - error ? 
 -> check ssh connexion is configured correctly and enabled in conf file 
@@ -52,13 +65,14 @@ $sudo systemctl status isc-dhcp-server
   
 4- SSH 
 - install open-ssh server
-  
-- crypto key
+  $sudo apt install openssh-server
+- config
+![ssh config](https://github.com/user-attachments/assets/e7fcafce-83be-4ca1-ac21-8dfe0c2eaa55)
 
   
 5- DNS
 - install bind
-  
+  $sudo apt install bind9 dnsutils
 - config 
 -> named.conf.local 
 -> named.conf.option 
