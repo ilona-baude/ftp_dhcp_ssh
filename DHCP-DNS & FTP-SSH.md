@@ -74,14 +74,20 @@ $sudo systemctl status isc-dhcp-server
 - install bind
   $sudo apt install bind9 dnsutils
 - config 
--> named.conf.local 
+-> named.conf.local
+![bind nc local](https://github.com/user-attachments/assets/78cfb04a-596f-42db-a655-f19ef532ce7d)
+
 -> named.conf.option 
+![bind nc options](https://github.com/user-attachments/assets/579d4093-1c16-46d5-bd33-7883ac9bc73f)
+
 -> zones files: db.dns.ftp.com & reverse ip zone 0.0.16.171.in-addr.arpa
+![bind zone master](https://github.com/user-attachments/assets/905b2f39-4d7a-40a5-b53a-eeb724e2d91f)
 
 - restart + status bind
   
 - test: nslookup & sftp laplateforme\@dns.ftp.com
-  
+![dns ping test](https://github.com/user-attachments/assets/9f1807d1-f4d2-4ef2-b6b3-be7d5d1d3708)
+
 - error? 
 -> zone file + double check file path 
 -> syntax 
